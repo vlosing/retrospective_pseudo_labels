@@ -6,6 +6,7 @@ The goal of here is to predict the driver's intent at intersections consisting o
 
 
 ## Meta-Parameter Configuration
+In the following, we give a list of all used meta-parameters for the corresponding experiments.
 ### LSTM
 The LSTM model was a bidirectional network with 2 LSTM layers, 128 hidden neurons within each layer, learning rate of 0.001, batch size of 256, and dropout 0,5. We used PyTorch for the implementation.
 
