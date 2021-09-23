@@ -12,43 +12,43 @@ The LSTM model was a bidirectional network with 2 LSTM layers, 128 hidden neuron
 
 | Data set      | Window size | Retro past window size| Retro future window size | 
 | ------------- | ----------- | --------------------- | ------------------------ |
-| Activities    | 100  |100  |100  |
-| Factory       | 100  |100  |100  |
-| Industry-cuact| 100  |100  |100  |
-| Industry-depos| 100  |100  |100  |
-| Industry-gepos| 100  |100  |100  |
-| Intersections | 100  |100  |100  |
+| Activities    | 25  |7|58  |
+| Factory       | 12  |10|86  |
+| Industry-cuact| 43  |34  |41  |
+| Industry-depos| 3  |16  |96  |
+| Industry-gepos| 20  |8  |65  |
+| Intersections | 17  |15  |34  |
 
 ### GRU
 The GRU model was a bidirectional network with 2 GRU layers, 128 hidden neurons within each layer, learning rate of 0.001, batch size of 256, and dropout 0,5. 
  We used PyTorch for the implementation.
 | Data set      | Window size | Retro past window size| Retro future window size | 
 | ------------- | ----------- | --------------------- | ------------------------ |
-| Activities    | 100  |100  |100  |
-| Factory       | 100  |100  |100  |
-| Industry-cuact| 100  |100  |100  |
-| Industry-depos| 100  |100  |100  |
-| Industry-gepos| 100  |100  |100  |
-| Intersections | 100  |100  |100  |
+| Activities    | 20  |7  |48  |
+| Factory       | 2  |5  |45  |
+| Industry-cuact| 49  |58  |14  |
+| Industry-depos| 90  |14  |66  |
+| Industry-gepos| 46  |17  |51  |
+| Intersections | 18  |20  |40  |
 
 ### Rocket
 The rocket model was based on a projection on 10000 dimensions paired with a scikit-learn logistic regression model using the lbfgs solver. We used the sktime implementation to get the rocket projections.
 | Data set      | Window size | Retro past window size| Retro future window size | 
 | ------------- | ----------- | --------------------- | ------------------------ |
-| Activities    | 100  |100  |100  |
-| Factory       | 100  |100  |100  |
-| Industry-cuact| 100  |100  |100  |
-| Industry-depos| 100  |100  |100  |
-| Industry-gepos| 100  |100  |100  |
-| Intersections | 100  |100  |100  |
+| Activities    | 60  |11  |14  |
+| Factory       | 11  |16  |23  |
+| Industry-cuact| 3  |33  |43  |
+| Industry-depos| 12  |11  |17  |
+| Industry-gepos| 3  |43  |40  |
+| Intersections | 2  |3  |39  |
 
 ### Random Forest
 We used the scikit-learn implementation with an ensemble size of 100 decision trees.
 | Data set      | Window size | Retro past window size| Retro future window size | 
 | ------------- | ----------- | --------------------- | ------------------------ |
-| Activities    | 100  |100  |100  |
-| Factory       | 100  |100  |100  |
-| Industry-cuact| 100  |100  |100  |
-| Industry-depos| 100  |100  |100  |
-| Industry-gepos| 100  |100  |100  |
-| Intersections | 100  |100  |100  |
+| Activities    | 79  |49  |87  |
+| Factory       | 11  |56  |67  |
+| Industry-cuact| 36  |60  |47  |
+| Industry-depos| 2  |53  |68  |
+| Industry-gepos| 14  |87  |44  |
+| Intersections | 13  |15  |35  |
