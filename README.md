@@ -1,8 +1,20 @@
 # Retrospective Self-Training
 This repository contains supplementary information and data to the article Viktor Losing, Martina Hasenjäger "Leveraging Retrospective Self-Training for Online Time-Series Classification".
 
-## Driver Intersection Prediction ([Access](https://github.com/vlosing/retrospective_pseudo_labels/blob/main/driver_intention_prediction.csv))
-The goal of here is to predict the driver's intent at intersections consisting of stopping, driving straight without stopping, or turning. It is based on the daily commute of fourteen subjects represented by a few ego-vehicle features such as the velocity, acceleration, distance to the intersection asf. This data set is described in detail in: Losing et al. "Personalized Maneuver Prediction at Intersections", ICRA 2017(). This data set was used in the experiments of the article. 
+## Data sets
+
+
+## Activity ([Access](https://www.utwente.nl/en/eemcs/ps/dataset-folder/sensors-activity-recognition-dataset-shoaib.rar))([Paper](https://pubmed.ncbi.nlm.nih.gov/24919015/))
+This publicly available data set contains body motions of ten different subjects and the task is to categorize them into daily activities such as walking, cycling, running etc. 
+The recordings are based on five Inertial Measurement Units (IMUs) that are mainly covering the upper body.
+## Factory (Proprietary)([Paper](https://ieeexplore.ieee.org/abstract/document/8794251))
+Different body motions that are inspired by common tasks factory-worker tasks are performed by four subjects. There are twenty different motion classes encoded such as stand, crouch down, pick-up a box asf. We recorded the data using the XSens body suit that incorporates seventeen IMUs spread over the whole body. 
+## Industry ([Access](https://zenodo.org/record/3254403#.YUyEtXuxWuc))([Paper](https://journals.sagepub.com/doi/abs/10.1177/0278364919882089))
+Similar to the \emph{\factorymotion{}} data set, the goal is to assess the motions of humans performing manual labour that can typically be found in assembly lines. The main focus here though is to estimate the posture for an ergonomic analysis. The data is also based on the XSens body suit and includes recordings of thirteen subjects. Three different label sets are available for the same motion data each covering slightly different aspects. \industrycuact{} focuses on general activities such as standing, crouching, walking, whereas \industrygepos{} and \industrydepos{} encode the body posture in a varying degree of detail. It was originally published in \cite{doi:10.1177/0278364919882089}. We regularly sub-sampled the data from originally \SI{240}{\Hz} to \SI{60}{\Hz} which still amounts to around 1.5 million data points.
+
+
+### Intersections ([Access](https://github.com/vlosing/retrospective_pseudo_labels/blob/main/driver_intention_prediction.csv))([Paper](https://ieeexplore.ieee.org/document/8317760))
+The goal of here is to predict the driver's intent at intersections consisting of stopping, driving straight without stopping, or turning. It is based on the daily commute of fourteen subjects represented by a few ego-vehicle features such as the velocity, acceleration, distance to the intersection asf.
 
 
 ## Meta-Parameter Configuration
